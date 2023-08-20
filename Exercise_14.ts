@@ -7,8 +7,8 @@ so you need to send out a new set of invitations. You’ll have to think of some
 • Print a second set of invitation messages, one for each person who is still in your list*/
 
 let newGuestNames:string[] = ["Ali Ammar", "Azeem", "Abdul Hanan"];
-const poppedElement = newGuestNames.pop();
-console.log(`${poppedElement} is not coming.`);
+const poppedElement1 = newGuestNames.pop();
+console.log(`${poppedElement1} is not coming.`);
 
 newGuestNames.push("Asim");
 console.log(`Hi ${newGuestNames[0]}, would you like to go for a dinner?`);
