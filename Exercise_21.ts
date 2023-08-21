@@ -2,14 +2,23 @@
 Change an index in one of your programs to produce an index error.
  Make sure you correct the error before closing the program. */
 
-let numbers:number[] = [1,2,3,4];
-
-const invalidIndex = 10;
-
-if(numbers.length<=invalidIndex || numbers.length>=invalidIndex){
-    console.error("Error");
+const detectRange = (arr:number[], start:number, end:number) => {
+    let result:number[];
+    if(result = arr.slice(start,end)){ 
+        return result;
+    } else if(Error){
+        if(Error instanceof RangeError){
+            return `Range error: ${Error.message}`;
+        }else{
+            return `An error occured: ${Error}`
+        }
+    }
 }
 
-const validIndex = 2;
-const correctValue = numbers[validIndex];
-console.log("Corrected value: ",correctValue);
+const myArray:number[] = [1,2,3,4,5];
+
+const startRange = 1;
+const endRange = 10;
+const result2 = detectRange(myArray,startRange,endRange);
+
+console.log(result2);
